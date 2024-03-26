@@ -29,7 +29,8 @@ $(document).ready(function() {
 
     console.log('test ajax');
 
-    fetch('https://webhook.site/458b13f4-f481-4cbd-b8c8-a1312260aa49', {
+    // fetch('https://webhook.site/458b13f4-f481-4cbd-b8c8-a1312260aa49', {
+    fetch('http://localhost:5003/query_openai', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
