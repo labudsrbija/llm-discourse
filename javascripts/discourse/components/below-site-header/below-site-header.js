@@ -4,15 +4,27 @@ export function testonijaTest() {
     console.log('testonija222>>> ', test2);
 }
 
+function getAllPosts() {
+  let postElements = document.querySelectorAll('div .cooked');
+  let textArray = [];
+  postElements.forEach(divElement => {
+      textArray.push(divElement.textContent.trim());
+  });
+
+  return textArray;
+}
 
 $(document).ready(function() {
   console.log('READY?!?!?!');
 
   document.getElementById('ajaxButton').addEventListener('click', function() {
     // Data to be sent
+
+    let trimmedPosts = getAllPosts();
     const dataToSend = {
       key1: 'value1',
-      key2: 'value2'
+      key2: 'value2',
+      posts: trimmedPosts
     };
 
     console.log('test ajax');
