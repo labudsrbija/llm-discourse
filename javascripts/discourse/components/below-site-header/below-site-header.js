@@ -45,6 +45,7 @@ $(document).ready(function() {
     })
     .then(data => {
       console.log('Response from server:', data);
+      document.getElementById('responseTextArea').value = data.body;
       // Handle the response data here
     })
     .catch(error => {
