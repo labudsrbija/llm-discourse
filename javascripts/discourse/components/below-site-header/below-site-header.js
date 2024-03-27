@@ -47,7 +47,8 @@ $(document).ready(function() {
     })
     .then(data => {
       console.log('Response from server:', data);
-      document.getElementById('responseTextArea').value = data.body;
+      const formattedBody = data.body.replace(/\n/g, '\n');
+      document.getElementById('responseTextArea').value = formattedBody;
       // Handle the response data here
     })
     .catch(error => {
