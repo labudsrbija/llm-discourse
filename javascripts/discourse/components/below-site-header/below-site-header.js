@@ -47,8 +47,8 @@ $(document).ready(function() {
     })
     .then(data => {
       console.log('Response from server:', data);
-      // const formattedBody = data.body.replace(/\n/g, '<br>');
-      const formattedBody = String.raw`${data.body}`;
+      const formattedBody = data.body.replace(/\\n/g, '\n');
+      console.log('formatted: ', formattedBody);
       document.getElementById('responseTextArea').value = formattedBody;
       // document.getElementById('responseTextArea').value = formattedBody;
       // Handle the response data here
