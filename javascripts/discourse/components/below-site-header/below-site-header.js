@@ -20,10 +20,12 @@ $(document).ready(function() {
   document.getElementById('ajaxButton').addEventListener('click', function() {
     // Data to be sent
 
+    let promptText = document.getElementById('promptInput').value;
     let trimmedPosts = getAllPosts();
     const dataToSend = {
       key1: 'value1',
       key2: 'value2',
+      prompt: promptText,
       posts: trimmedPosts
     };
 
